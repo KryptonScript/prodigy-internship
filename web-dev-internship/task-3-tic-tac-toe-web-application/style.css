@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #000e8f;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    margin-top: 0;
+}
+
+.container h1 {
+    font-size: 3.0em;
+    margin-top: 0;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 105px);
+    grid-gap: 5.0px;
+    margin: 15px auto;
+}
+
+.cell {
+    width: 105px;
+    height: 105px;
+    border: 3.5px solid #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6.5em;
+    cursor: pointer;
+}
+
+.message {
+    font-size: 2.0em;
+    margin-bottom: 8px;
+}
+
+#resetButton {
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: #8d0000;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 1.30em;
+}
+
+.winning-line {
+    position: absolute;
+    background-color: #ff0000;
+    height: 4px;
+    width: 150px;
+    transition: width 0.3s ease-in-out;
+}
