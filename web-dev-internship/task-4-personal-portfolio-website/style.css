@@ -88,8 +88,8 @@ section {
 
 
 .profile-img {
-    width: 300px;
-    height: 300px;
+    width: 20rem;
+    height: 20rem;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
@@ -137,6 +137,10 @@ section {
 
 #projects {
     height: 750px;
+}
+
+#projects .linkHere {
+    text-decoration: none;
 }
 
 .contact {

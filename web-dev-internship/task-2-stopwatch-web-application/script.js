@@ -7,8 +7,9 @@ let isRunning = false;
 let lapCount = 0;
 const startBtn = document.querySelector(".startBtn");
 const pauseBtn = document.querySelector(".pauseBtn");
+const lapBtn = document.querySelector(".lapBtn");
+const resetBtn = document.querySelector(".resetBtn");
 const lapDisplay = document.querySelector(".lapDisplay");
-
 
 function formatTime(milliseconds) {
   const totalSeconds = Math.floor(milliseconds / 1000);
@@ -51,7 +52,13 @@ function startTimer() {
     startTime = now - elapsedTime;
     isRunning = true;
     rafId = requestAnimationFrame(tick);
+    startBtn.style.display = "none";
+    pauseBtn.style.display = "inline";
     pauseBtn.textContent = "Pause";
+
+    lapBtn.style.display = "inline";
+    resetBtn.style.display = "inline";
+
   }
 }
 
@@ -61,34 +68,36 @@ function pauseTimer() {
     isRunning = false;
     pauseBtn.textContent = "Resume";
     startBtn.style.display = "none";
+    lapBtn.style.display = "none";
   } else {
     startTimer();
   }
 }
 
-document.querySelector(".startBtn").onclick = function () {
+startBtn.onclick = function () {
   startTimer();
 };
 
-document.querySelector(".pauseBtn").onclick = function () {
+pauseBtn.onclick = function () {
   pauseTimer();
 };
 
-document.querySelector(".resetBtn").onclick = function () {
+resetBtn.onclick = function () {
   if (rafId) cancelAnimationFrame(rafId);
   isRunning = false;
   elapsedTime = 0;
   startTime = 0;
   lapCount = 0;
   document.querySelector(".minutes").textContent = "00:00.00";
-  startBtn.style.display = "inline";
-  pauseBtn.textContent = "Pause";
+  startBtn.style.display = "block";
+  pauseBtn.style.display = "none";
+  lapBtn.style.display = "none";
+  resetBtn.style.display = "none";
 
-  lapDisplay.style.display = "none";
   lapDisplay.innerHTML = "";
 };
 
-document.querySelector(".lapBtn").onclick = function () {
+lapBtn.onclick = function () {
   if (isRunning) {
     lapCount++;
 

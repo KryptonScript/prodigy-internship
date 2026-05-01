@@ -15,7 +15,8 @@ window.addEventListener("scroll", () => {
     }
 });
 
-const newYear = new Date().getFullYear();
 const yearUpdate = document.getElementById("footerYear");
+const newYear = new Date().getFullYear();
+
 
 yearUpdate.textContent = newYear;

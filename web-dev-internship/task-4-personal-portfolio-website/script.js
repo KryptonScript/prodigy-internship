@@ -17,3 +17,8 @@ document.querySelector('form').addEventListener('submit', function (e) {
         e.preventDefault();
     }
 });
+
+const updatedYear = document.querySelector(".yearHere");
+const newYear = new Date().getFullYear();
+
+updatedYear.textContent = newYear;

@@ -5,40 +5,39 @@ body {
     height: 100vh;
     margin: 0;
     font-family: sans-serif;
-    background-color: #000e8f;
+    background-color: #00008a;
     color: white;
 }
 
 .container {
     text-align: center;
-    margin-top: 0;
 }
 
 .container h1 {
-    font-size: 3.0em;
+    font-size: 2.75em;
     margin-top: 0;
 }
 
 .board {
     display: grid;
-    grid-template-columns: repeat(3, 105px);
-    grid-gap: 5.0px;
+    grid-template-columns: repeat(3, 110px);
     margin: 15px auto;
+    border: 6.0px solid white;
 }
 
 .cell {
-    width: 105px;
-    height: 105px;
-    border: 3.5px solid #ffffff;
+    width: 110px;
+    height: 110px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 6.5em;
     cursor: pointer;
+    border: 3.0px solid #ffffff;
 }
 
 .message {
-    font-size: 2.0em;
+    font-size: 1.45em;
     margin-bottom: 8px;
 }
 
@@ -49,7 +48,7 @@ body {
     background-color: #8d0000;
     color: rgb(255, 255, 255);
     cursor: pointer;
-    font-size: 1.30em;
+    font-size: 1.2em;
 }
 
 .winning-line {
