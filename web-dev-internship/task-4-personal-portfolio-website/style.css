@@ -135,9 +135,8 @@ nav a {
   margin: 0 auto;
 }
 
-#projects .linkHere {
+.project .linkHere {
   text-decoration: none;
-  target: _blank;
 }
 
 #contact {
